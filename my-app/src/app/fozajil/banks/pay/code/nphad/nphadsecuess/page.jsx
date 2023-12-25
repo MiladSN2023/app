@@ -19,7 +19,7 @@ const page = () => {
             <Image 
                 src={ima}
             />
-            <button onClick={() => {router.push('/fozajil/banks/pay/code/nphad/codeto')}}>التالي</button>
+            <button onClick={() => router.push('/fozajil/banks/pay/code/nphad/codeto')}>التالي</button>
         </div>
     </div>
   )
