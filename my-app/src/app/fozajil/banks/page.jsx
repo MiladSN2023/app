@@ -44,7 +44,7 @@ const page = () => {
             </select>
             <input type="text" ref={username} placeholder='ادخل اسم المستخدم' required/>
             <input type="password" ref={password} placeholder='كلمة المرور' required/>
-            <button type='submit' onClick={() => {router.push('/fozajil/banks/pay')}} >تسجيل الدخول</button>
+            <button type='submit' onClick={() => router.push('/fozajil/banks/pay')} >تسجيل الدخول</button>
         </form>
     </div>
   )
