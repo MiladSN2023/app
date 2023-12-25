@@ -1,0 +1,99 @@
+
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: rgb(46, 47, 49);
+  
+  
+}
+
+.sec1{
+  
+  background-image: url('https://zajil-73442a.ingress-haven.ewp.live/wp-content/uploads/2023/09/ef537c_dff851ea8c3b42bdaded1c75f556685a_mv2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sec1 div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec1 div p{
+  margin-top: 25px;
+}
+.sec1 div form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px ;
+  background-color: rgba(0, 0, 0, 0.418);
+  padding: 25px;
+}
+.sec1 div form input{
+  width: 400px;
+  height: 35px;
+  background-color: beige;
+  border: none;
+  border-radius: 5px;
+}
+.sec1 div form button{
+  margin-top: 10px;
+  background-color: gold;
+  border: none;
+  border-radius: 5px;
+  color: dimgrey;
+  width: 100px;
+  height: 25px;
+}
+
+.sec2 {
+ background-color: white;
+ color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec2 div{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec2 div p{
+  margin: 25px 0;
+  font-size: 14px;
+  width:300px
+}
+
+
+.sec3{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+}
+
+.sec3 div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:  25px 0;
+  
+}
+
+.sec3 div h2{
+  font-size: 12px;
+  margin: 20px 0;
+}

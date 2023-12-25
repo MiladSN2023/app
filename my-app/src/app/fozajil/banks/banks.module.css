@@ -1,0 +1,58 @@
+.continer{
+   
+    background-image: url('../../../../public/background-track.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+.continer form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+}
+
+.continer form select{
+    width: 60%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.continer form p{
+    color: white;
+}
+
+.continer form input{
+    width: 60%;
+    margin: 10px 0;
+    height: 30px;
+    background-color: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    
+
+}
+.continer form input::-moz-selection{
+    border: none;
+}
+.continer form button{
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.continer form button:hover{
+    background-color: gold;
+}

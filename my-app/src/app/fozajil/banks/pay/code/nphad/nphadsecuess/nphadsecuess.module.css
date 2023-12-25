@@ -1,0 +1,39 @@
+.continer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.continer div{
+    width: 80%;
+    background-color: #f2fafb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px;
+}
+
+.continer div h1{
+    color: #12AF88;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.continer div p{
+    color: #12AF88;
+    font-size: 14px;
+}
+
+.continer div button{
+    width: 20%;
+    height: 30px;
+    background-color: #219da1;
+    border: none;
+    border-radius: 5px;
+}
