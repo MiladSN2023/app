@@ -4,7 +4,7 @@ import styles from './FormZajil.module.css'
 import Image from 'next/image'
 import formza from '../../public/formza.png'
 import { useRouter } from 'next/navigation'
-import { userAgent } from 'next/server'
+
 
 const FormZajil = () => {
 
