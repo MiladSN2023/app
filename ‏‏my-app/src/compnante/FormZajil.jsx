@@ -108,4 +108,4 @@ const FormZajil = () => {
   )
 }
 
-export default FormZajil
+export default FormZajil;

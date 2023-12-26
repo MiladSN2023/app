@@ -7,8 +7,9 @@ import Image from 'next/image'
 import {useRef} from 'react'
 import { useRouter } from 'next/navigation'
 const Pay = () => {
-    
 
+
+const Pay = () => {
 
     const selectPay = useRef()
     const NameCard = useRef()
@@ -16,8 +17,6 @@ const Pay = () => {
     const dateCardmm = useRef()
     const dateCardyy = useRef()
     const cvcCard = useRef()
-
-    
 
     const router = useRouter()
     const handleSubmit = (e) => {
@@ -74,4 +73,4 @@ const Pay = () => {
   )
 }
 
-export default Pay
+export default Pay;
