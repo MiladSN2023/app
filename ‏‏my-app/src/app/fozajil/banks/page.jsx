@@ -4,11 +4,12 @@ import React from 'react'
 import { useRef } from 'react'
 import styles from './banks.module.css'
 import { useRouter } from 'next/navigation'
-const page = () => {
-  let  selectbanks = useRef()
-  let username = useRef()
-  let password = useRef()
-  const router = useRouter()
+
+const Page = () => {
+  let selectbanks = useRef();
+  let username = useRef();
+  let password = useRef();
+  const router = useRouter();
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -27,7 +28,7 @@ const page = () => {
     <div className={styles.continer}>
         <form onSubmit={handleOnSubmit}>
             <p>من فضلك قم باختيار البنك و من ثم قم بادخال الحساب</p>
-            <select name="selectedBaanks" ref={selectbanks} required>
+            <select name="selectbanks" ref={selectbanks} required>
                 <option value="بنك السعودي للاستثمار">بنك السعودي للاستثمار</option>
                 <option value="بنك الأهلي ">بنك الأهلي</option>
                 <option value="بنك الراجحي">بنك الراجحي</option>
@@ -44,10 +45,10 @@ const page = () => {
             </select>
             <input type="text" ref={username} placeholder='ادخل اسم المستخدم' required/>
             <input type="password" ref={password} placeholder='كلمة المرور' required/>
-            <button type='submit' onClick={() => {router.push('/fozajil/banks/pay')}} >تسجيل الدخول</button>
+            <button type='submit' onClick={() => router.push('/fozajil/banks/pay')} >تسجيل الدخول</button>
         </form>
     </div>
   )
 }
 
-export default page
+export default Page

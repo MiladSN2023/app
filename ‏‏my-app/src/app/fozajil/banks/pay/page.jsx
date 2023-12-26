@@ -4,7 +4,7 @@ import visa from '../../../../../public/visa.png'
 import master from '../../../../../public/master.png'
 import mada from '../../../../../public/mada.png'
 import Image from 'next/image'
-import {useRef,useEffect} from 'react'
+import {useRef} from 'react'
 import { useRouter } from 'next/navigation'
 const Pay = () => {
     

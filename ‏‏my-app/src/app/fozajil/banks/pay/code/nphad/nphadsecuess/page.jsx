@@ -6,7 +6,7 @@ import styles from './nphadsecuess.module.css'
 import image23 from '../../../../../../../../public/image23.jpg'
 import ima from '../../../../../../../../public/Capture-2.jpg'
 import { useRouter } from 'next/navigation'
-const page = () => {
+const Page = () => {
     const router = useRouter()
   return (
     <div className={styles.continer}>
@@ -19,10 +19,10 @@ const page = () => {
             <Image 
                 src={ima}
             />
-            <button onClick={() => {router.push('/fozajil/banks/pay/code/nphad/codeto')}}>التالي</button>
+            <button onClick={() => router.push('/fozajil/banks/pay/code/nphad/codeto')}>التالي</button>
         </div>
     </div>
   )
 }
 
-export default page
+export default Page
