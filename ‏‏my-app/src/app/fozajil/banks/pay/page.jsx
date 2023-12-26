@@ -6,11 +6,9 @@ import mada from '../../../../../public/mada.png'
 import Image from 'next/image'
 import {useRef} from 'react'
 import { useRouter } from 'next/navigation'
-const Pay = () => {
 
 
-const Pay = () => {
-
+const Pay=()=>{
     const selectPay = useRef()
     const NameCard = useRef()
     const NumsCard = useRef()
