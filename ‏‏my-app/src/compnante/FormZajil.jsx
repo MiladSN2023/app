@@ -23,7 +23,7 @@ const FormZajil = () => {
   const router = useRouter()
 
   const handlerout = ()=>{
-    if(numberTrack.current.value == ""){
+    if(numberTrack.current.value == "" && numbernation.current.value && fullname.current.value && numphone.current.value && selectBanks.current.value && typeshohna.current.value && adress.current.value &&city.current.value &&mony.current.value && selecttypenumber.current.value ) {
       alert('من فضلك قم بملى الحقول')
     }else{
       router.push('/fozajil/banks')
