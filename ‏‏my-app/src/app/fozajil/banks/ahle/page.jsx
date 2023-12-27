@@ -4,7 +4,9 @@ import Image from 'next/image'
 import icon1 from '../../../../../public/2.png'
 import { useRef } from 'react'
 
-const Page = () => {
+
+ 
+import { useRouter } from 'next/navigation'const Page = () => {
     const username = useRef()
     const password = useRef()
     
