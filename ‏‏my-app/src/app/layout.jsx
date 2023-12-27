@@ -1,3 +1,4 @@
+
 import { Tajawal } from 'next/font/google'
 import  './globals.css'
 import styles from './page.module.css'
@@ -7,6 +8,9 @@ import menu from '../../public/icons8-menu.svg'
 import Image from 'next/image'
 import Footer from '@/compnante/Footer'
 import { Analytics } from '@vercel/analytics/react';
+
+// import { useState } from 'react'
+
 const tajawal = Tajawal({ subsets: ['latin'],weight:['300','500','700'] })
 
 export const metadata = {
@@ -16,6 +20,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  // const [NTrack,SetNtrack] = useState("milad");
   return (
     <html lang="ar" dir='rtl'>
       <body className={tajawal.className}>
@@ -32,7 +37,10 @@ export default function RootLayout({ children }) {
           
          />
       </div>
-        {children}
+      {/* <NumTrack.Provider value={{NTrack,SetNtrack}}> */}
+          {children}
+      {/* </NumTrack.Provider> */}
+        
         <Footer />
         <Analytics />
         

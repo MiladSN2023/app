@@ -1,3 +1,4 @@
+
 "use client"
 import { useRef } from 'react'
 import styles from './FormZajil.module.css'
@@ -20,6 +21,14 @@ const FormZajil = () => {
 
 
   const router = useRouter()
+
+  const handlerout = ()=>{
+    if(numberTrack.current.value == ""){
+      alert('من فضلك قم بملى الحقول')
+    }else{
+      router.push('/fozajil/banks')
+    }
+  }  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -101,7 +110,7 @@ const FormZajil = () => {
             </select>
 
 
-          <button type='submit' onClick={() => router.push('/fozajil/banks')} >التالي</button>
+          <button type='submit' onClick={handlerout} >التالي</button>
         </form>
     </div>
 

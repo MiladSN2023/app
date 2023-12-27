@@ -1,58 +1,33 @@
 .continer{
-   
+   width: 100%;
+   padding: 4rem 2rem;
     background-image: url('../../../../public/background-track.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
 
-
-}
-.continer form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100px;
-}
-
-.continer form select{
-    width: 60%;
-    height: 30px;
-    margin-top: 20px;
-}
-
-.continer form p{
-    color: white;
-}
-
-.continer form input{
-    width: 60%;
-    margin: 10px 0;
-    height: 30px;
-    background-color: transparent;
-    text-align: center;
-    border: none;
-    border-bottom: 1px solid black;
-    border-radius: 5px;
     
+    height: 100vh;
+    gap: 20px;
+}
 
+.continer div{
+    display: flex;
+    flex-direction: column;
 }
-.continer form input::-moz-selection{
-    border: none;
-}
-.continer form button{
-    width: 50%;
+
+.continer div button{
+    background-color: #f0c128;
     height: 30px;
     border: none;
-    border-radius: 5px;
+    width: 70px;
+    
 }
 
-.continer form button:hover{
-    background-color: gold;
+.continer div button:hover{
+    background-color: #cea625;
+
 }

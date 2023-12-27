@@ -1,6 +1,9 @@
 import React from 'react'
 import FormZajil from '@/compnante/FormZajil';
-const page = () => {
+
+
+const Page = () => {
+
   return (
     <div>
         <FormZajil/>
@@ -8,4 +11,4 @@ const page = () => {
   )
 }
 
-export default page; 
+export default Page; 

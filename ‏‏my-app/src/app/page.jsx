@@ -1,3 +1,4 @@
+"use client"
 
 import styles from './page.module.css'
 import Image from 'next/image'
@@ -9,18 +10,38 @@ import postive from "../../public/icons8-positive-dynamic-26.png"
 import database from "../../public/icons8-database-48.png"
 import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
+import { useRouter } from 'next/navigation'
+import { useRef,useState } from 'react'
+
+
+
+
+
 
 export default function Home() {
+  const router = useRouter();
+  const ntrack = useRef();
+  const [track,setTrack]=useState();
+  const handlerout = ()=>{
+    if(ntrack.current.value == ""){
+      alert('من فضلك قم بملى الحقول')
+    }else{
+      setTrack(ntrack.current.value)
+      router.push('/fozajil')
+    }
+  }
 
   return (
+    
     <main className={styles.main}>
+    
       <div className={styles.sec1}>
         <div>
         <h3>حلول لوجستية سهلة وموثوقة وبأسعار تنافسية</h3>
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form action='/fozajil'>
-            <input type="number" placeholder='ادخل رقم تتبع الشحنة' required/>
-            <button type='submit'>تابع شحنتك</button>
+            <input type="number" ref={ntrack} placeholder='ادخل رقم تتبع الشحنة' required/>
+            <button type='submit' onClick={handlerout}>تابع شحنتك</button>
         </form>
         </div>
       
@@ -96,4 +117,7 @@ export default function Home() {
       </div> 
     </main>
   )
+  
 }
+
+

