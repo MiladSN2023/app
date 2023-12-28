@@ -1,9 +1,11 @@
 "use client"
+
 import styles from './france.module.css'
 import Image from 'next/image'
 import icon1 from '../../../../../public/7.png'
 import { useRef } from 'react'
 import { useRouter } from 'next/navigation'
+
 const Page = () => {
     const username = useRef()
     const password = useRef()
