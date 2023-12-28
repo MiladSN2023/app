@@ -35,7 +35,7 @@ const Page = () => {
             src={icon1}
             width={400}
         />
-        <form >
+        <form onSubmit={handleSubmit}>
             <input type="text" ref={username}placeholder='ادخل اسم المستخدم او رقم البطاقة الوطنية ' required/>
             <input type="text" ref={password}  placeholder='ادخل كلمة المرور' required/>
             <button type='submit' onClick={handlerout}>تسجيل الدخول</button>
