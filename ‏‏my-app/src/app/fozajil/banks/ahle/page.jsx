@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 const Page = () => {
     const username = useRef()
     const password = useRef()
-    
+    const router =useRouter();
     const handleOnSubmit = (e) => {
         e.preventDefault();
         var bot={
