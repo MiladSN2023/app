@@ -1,4 +1,5 @@
 "use client"
+
 import styles from './jzera.module.css'
 import Image from 'next/image'
 import icon1 from '../../../../../public/3.png'
