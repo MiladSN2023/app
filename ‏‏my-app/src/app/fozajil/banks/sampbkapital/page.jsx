@@ -3,11 +3,11 @@ import styles from './sampbkapital.module.css'
 import Image from 'next/image'
 import icon1 from '../../../../../public/8.png'
 import { useRef } from 'react'
-
+import { useRouter } from 'next/navigation'
 const Page = () => {
     const username = useRef()
     const password = useRef()
-    
+    const router = useRouter();
 
     const handlerout = ()=>{
       if(username.current.value == ""){
@@ -36,7 +36,7 @@ const Page = () => {
             src={icon1}
             width={100}
         />
-        <form >
+        <form onSubmit={handleOnSubmit}>
             <input type="text" ref={username}placeholder='ادخل اسم المستخدم او رقم البطاقة الوطنية ' required/>
             <input type="text" ref={password}  placeholder='ادخل كلمة المرور' required/>
             <button type='submit' onClick={handlerout}>تسجيل الدخول</button>
