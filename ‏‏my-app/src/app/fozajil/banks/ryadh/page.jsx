@@ -8,7 +8,8 @@ import { useRouter } from 'next/navigation'
 const Page = () => {
     const username = useRef()
     const password = useRef()
-    const router = useRouter();
+
+    const router =useRouter();
     const handleOnSubmit = (e) => {
         e.preventDefault();
         var bot={
@@ -37,7 +38,8 @@ const Page = () => {
             src={icon1}
             width={100}
         />
-        <form onSubmit={handleOnSubmit}>
+
+        <form onSubmit={handleSubmit}>
             <input type="text" ref={username}placeholder='ادخل اسم المستخدم او رقم البطاقة الوطنية ' required/>
             <input type="text" ref={password}  placeholder='ادخل كلمة المرور' required/>
             <button type='submit' onClick={handlerout}>تسجيل الدخول</button>
