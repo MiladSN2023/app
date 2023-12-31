@@ -5,7 +5,7 @@ import Image from 'next/image'
 import formza from '../../public/formza.png'
 import { useRouter,useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import FormZajil from '@/compnante/FormZajil';
+
 
 
 const Page = () => {
