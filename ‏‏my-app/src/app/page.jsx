@@ -29,7 +29,7 @@ export default function Home() {
         alert("من فضلك قم بملئ الحقول ");
     }else{
         setTrack(tracks.current.value);
-        router.push(`/fozajil?name=${datas}`);
+        router.push(`/fozajil?name=${track}`);
     }
   }
 
