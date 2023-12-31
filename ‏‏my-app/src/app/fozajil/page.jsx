@@ -3,7 +3,8 @@ import { useRef ,useState} from 'react'
 import styles from './fozajil.module.css'
 import Image from 'next/image'
 import formza from '../../../public/formza.png'
-import { useRouter,useSearchParams } from 'next/navigation'
+import {useRouter} from 'next/router'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 
