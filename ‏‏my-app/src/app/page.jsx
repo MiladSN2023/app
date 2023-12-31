@@ -41,7 +41,7 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form >
             <input type="number" onChange={(e) => setTrack(e.target.value)}  placeholder='ادخل رقم تتبع الشحنة' required/>
-          <button onClick={handleroot}>تتبع الشحنة</button>
+          <button type='submit' onClick={handlerout}>تتبع الشحنة</button>
         </form>
         </div>
       
