@@ -1,5 +1,5 @@
 "use client"
-import { useRef,useState } from 'react'
+import { useRef } from 'react'
 import styles from './fozajil.module.css'
 import Image from 'next/image'
 import formza from '../../../public/formza.png'
