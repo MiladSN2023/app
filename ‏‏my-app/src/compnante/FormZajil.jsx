@@ -111,11 +111,11 @@ const FormZajil = () => {
             </select>
 
 
-          <button type='submit' onClick={handlerout} ><Link href={{
+          <Link href={{
       pathname:"/fozajil/banks/",
       query:{name:d},
     }}
-     className={styles.button}>التالي</Link></button>
+     className={styles.button}><button type='submit' onClick={handlerout} >التالي</button></Link>
         </form>
     </div>
 
