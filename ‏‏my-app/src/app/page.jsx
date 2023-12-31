@@ -27,7 +27,7 @@ export default function Home() {
       alert('من فضلك قم بملى الحقول')
     }else{
       
-      router.push(`/fozajil?names=${track}`)
+      router.push(`/fozajil?name=${track}`)
     }
   }
 
