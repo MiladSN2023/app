@@ -36,11 +36,12 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
       alert('من فضلك قم بملى الحقول')
     }else{
       
-      router.push({pathname:'/fozajil/banks',query:{names:datas},
-});
+      router.push({
+        pathname:'/fozajil/banks',
+        query:{names:datas},});
     }
 
-}
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
