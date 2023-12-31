@@ -35,7 +35,7 @@ export default function Home() {
             <Link href = {{
             pathname:'/fozajil',
             query:{name:track}
-            }}></Link>
+            }} className={styles.button}>تتبع الشحنة</Link>
         </form>
         </div>
       
