@@ -31,7 +31,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
     }else{
        router.push(`/fozajil/banks?names=${datas}`)
     }
-
+  }
 
 
   const handleSubmit = (e) => {
