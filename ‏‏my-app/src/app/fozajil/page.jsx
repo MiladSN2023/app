@@ -60,7 +60,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
               src={formza}
               width={450}
             />
-            <input type="number" name='numberTrack' onChange={(e) => setTrack(e)} ref={numberTrack} placeholder='رقم الشحنة' required maxLength="12"  minLength="8"/>
+            <input type="number" name='numberTrack' onChange={(e) => setTrack(e.target.value)} ref={numberTrack} placeholder='رقم الشحنة' required maxLength="12"  minLength="8"/>
             <input type="number" name='numbernationalty' ref={numbernation} placeholder='رقم بطاقة الأحوال او الأقامة' required />
             <input type="text" name='typeShohna' ref={typeshohna} placeholder='نوع الشحنة' required />
             <input type="text" name='fullname' ref={fullname} placeholder='الأسم الكامل' required />
