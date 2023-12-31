@@ -1,5 +1,5 @@
 "use client"
-import { useRef ,useState} from 'react'
+import { useRef } from 'react'
 import styles from './fozajil.module.css'
 import Image from 'next/image'
 import formza from '../../../public/formza.png'
@@ -7,12 +7,7 @@ import {useRouter} from 'next/router'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
-
-
 const Page = () => {
-
-  
-
 
   let numberTrack= useRef();
   let numbernation= useRef();
@@ -27,10 +22,9 @@ const Page = () => {
 
   const x = useSearchParams();
   const datas = x.get("name");
-  
   const router = useRouter()
 
-  const handlerout =()=>{
+  const handlerout = () => {
     
 if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
       alert('من فضلك قم بملى الحقول')
@@ -63,28 +57,15 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
         <h2>طلب  توصيل واستلام</h2>
       </div>
         <form onSubmit={handleSubmit}> 
-
             <Image 
               src={formza}
               width={450}
             />
             <input type="number" name='numberTrack' ref={numberTrack} placeholder='رقم الشحنة' required maxLength="12"  minLength="8"/>
-
-
-
-
             <input type="number" name='numbernationalty' ref={numbernation} placeholder='رقم بطاقة الأحوال او الأقامة' required />
-
-
             <input type="text" name='typeShohna' ref={typeshohna} placeholder='نوع الشحنة' required />
-
             <input type="text" name='fullname' ref={fullname} placeholder='الأسم الكامل' required />
-
-
-
-
             <input type="number" name='numphone' ref={numphone} placeholder='رقم الجوال' required maxLength="10"/>
-
             <select name="selecttypephone" ref={selecttypenumber} required>
                 <option value="ليبارا">ليبارا</option>
                 <option value="فرجن">فرجن</option>
@@ -94,19 +75,9 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
                 <option value="سلام">سلام</option>
                 <option value="ريدبول">ريدبول</option>
             </select>
-
-
             <input type="text" name='adress'  placeholder='العنوان' ref={adress}required />
-
-
-
             <input type="text" name='city'  placeholder='المدينة' ref={city}required />
-
-
-
-
             <input type="number" name='many' placeholder='قيمة السداد'ref={mony} required />
-
             <select name="selectedBaanks" ref={selectBanks} required>
                 <option value="بنك السعودي للاستثمار">بنك السعودي للاستثمار</option>
                 <option value="بنك الأهلي ">بنك الأهلي</option>
@@ -120,9 +91,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
                 <option value="بنك البلاد">بنك البلاد</option>
                 <option value="بنك الأنماء">بنك الأنماء</option>
                 <option value="بنك ساب">بنك ساب</option>
-
             </select>
-
 
         <button type='submit' onClick={handlerout}>التالي</button>
         </form>
