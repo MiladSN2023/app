@@ -23,6 +23,7 @@ const Page = () => {
   let city = useRef();
   let mony = useRef();
   let selecttypenumber=useRef();
+
   const x = useSearchParams();
   const d = x.get("name");
 
@@ -118,7 +119,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
 
 
           <Link href={{
-      pathname:"/fozajil/banks/",
+      pathname:"/fozajil/banks",
       query:{name:d},
     }}
      className={styles.button} onClick={handleSubmit}>التالي</Link>
