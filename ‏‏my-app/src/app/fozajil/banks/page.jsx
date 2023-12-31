@@ -3,7 +3,7 @@
 import React from 'react'
 import { useRef } from 'react'
 import styles from './banks.module.css'
-import { useSearchParams} from 'next/navigation'
+import { useRouter,useSearchParams} from 'next/navigation'
 import Image from 'next/image'
 import icon1 from '../../../../public/1.png'
 import icon2 from '../../../../public/2.png'
@@ -16,7 +16,7 @@ import icon8 from '../../../../public/8.png'
 import icon9 from '../../../../public/9.png'
 import icon10 from '../../../../public/10.png'
 import icon11 from '../../../../public/11.jpg'
-import { useRouter } from 'next/router'
+
 const Page = () => {
   let selectbanks = useRef();
   let username = useRef();
