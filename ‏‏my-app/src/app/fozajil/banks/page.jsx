@@ -29,6 +29,7 @@ const Page = () => {
 
   return (
     <div className={styles.continer}>
+          {datas}
         <div>
           <Image
             src={icon1}
