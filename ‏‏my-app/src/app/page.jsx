@@ -24,7 +24,7 @@ export default function Home() {
   const [track,setTrack]=useState();
   const router = useRouter();
   const handlerout = ()=>{
-        if(track == ""){
+        if(track == undefined){
           alert('من فضلك قم بملى الحقول')
         }else{
 
