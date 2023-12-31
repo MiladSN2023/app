@@ -57,7 +57,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
       <div className={styles.navbar}>
         <h2>طلب  توصيل واستلام</h2>
       </div>
-        <form  onSubmit={handleSubmit} > 
+        <form> 
 
             <Image 
               src={formza}
