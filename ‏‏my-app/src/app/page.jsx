@@ -12,7 +12,7 @@ import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
 import { useRouter } from 'next/navigation'
 import { useRef,useState } from 'react'
-
+import Link from 'next/link'
 
 
 
@@ -41,7 +41,11 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form action='/fozajil'>
             <input type="number" ref={ntrack} placeholder='ادخل رقم تتبع الشحنة' required/>
-            <button type='submit' onClick={handlerout}>تابع شحنتك</button>
+            <button type='submit' onClick={handlerout}> <Link href={{
+      pathname:"/fozajil",
+      query:{name:d},
+    }}
+     >تتبع الشحنة</Link></button>
         </form>
         </div>
       
