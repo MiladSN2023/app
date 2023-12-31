@@ -20,7 +20,7 @@ import { useState } from 'react'
 
 export default function Home() {
   const [track,setTrack]=useState();
-  const router = useRouter();
+  const router = useRouter()
   const handlerout = ()=>{
     if(track == ""){
       alert('من فضلك قم بملى الحقول')
