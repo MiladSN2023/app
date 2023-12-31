@@ -10,8 +10,8 @@ import postive from "../../public/icons8-positive-dynamic-26.png"
 import database from "../../public/icons8-database-48.png"
 import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
-//import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+
 import { useState } from 'react'
 
 
@@ -24,14 +24,8 @@ export default function Home() {
   const [track,setTrack]=useState();
   const router = useRouter();
   const handlerout = ()=>{
-        if(track == undefined){
+        if(){
           alert('من فضلك قم بملى الحقول')
-        }else{
-
-          router.push({
-      pathname: '/fozajil',
-      query: { name: track },
-    });
         }
       }
   return (
@@ -44,7 +38,13 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form >
             <input type="number" onChange={(e) => setTrack(e.target.value)}  placeholder='ادخل رقم تتبع الشحنة' required/>
-          <button type='submit' onClick={handlerout}>تتبع الشحنة</button>
+{
+    if (track != undefined)(
+           <Link  href={{
+            pathname:"/fozajil",
+            query:{name:track},
+           }}>تتبع الشحنة</Link>)
+{
         </form>
         </div>
       
