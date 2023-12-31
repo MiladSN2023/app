@@ -4,7 +4,7 @@ import styles from './fozajil.module.css'
 import Image from 'next/image'
 import formza from '../../../public/formza.png'
 
-import {useRouter, useSearchParams } from 'next/navigation'
+import {useRouter} from 'next/navigation'
 import Link from 'next/link'
 
 const Page = () => {
