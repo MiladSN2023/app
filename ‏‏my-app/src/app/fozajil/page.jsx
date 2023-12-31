@@ -20,8 +20,8 @@ const Page = () => {
   let mony = useRef();
   let selecttypenumber=useRef();
 
-  const x = useSearchParams();
-  const datas = x.get("name");
+  const  name = useSearchParams();
+  const datas = name.get("name");
   const router = useRouter()
 
   const handlerout = () => {
