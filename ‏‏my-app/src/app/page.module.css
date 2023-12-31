@@ -44,7 +44,7 @@
     /* border-radius: 5px; */
     border-bottom: 1px solid black;
 }
-.sec1 div form button{
+.sec1 div form a{
     color: #413939;
     background-color: #ffffff7a;
     font-size: 14px;
