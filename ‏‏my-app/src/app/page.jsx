@@ -39,7 +39,7 @@ export default function Home() {
         <div>
         <h3>حلول لوجستية سهلة وموثوقة وبأسعار تنافسية</h3>
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
-        <form action='/fozajil'>
+        <form >
             <input type="number" onChange={(e) => setTrack(e.target.value)} placeholder='ادخل رقم تتبع الشحنة' required/>
            <button onClick={handlerout}>تتبع الشحنة</button>
         </form>
