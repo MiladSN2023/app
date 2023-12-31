@@ -40,7 +40,7 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form >
             <input type="number" ref={tracks} placeholder='ادخل رقم تتبع الشحنة' required/>
-           <Link href={{
+           <Link onClick={handlerout} href={{
             pathname:"/fozajil",
             query:{name:track}
            }}>تتبع الشحنة</Link>
