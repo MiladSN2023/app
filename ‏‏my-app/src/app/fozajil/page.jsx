@@ -57,7 +57,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
       <div className={styles.navbar}>
         <h2>طلب  توصيل واستلام</h2>
       </div>
-        <form   > 
+        <form  onSubmit={handleSubmit} > 
 
             <Image 
               src={formza}
@@ -119,11 +119,11 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
             </select>
 
 
-          <a onClick={handleSubmit}><Link href={{
+          <input type='submit' ><Link href={{
       pathname:"/fozajil/banks",
       query:{names:datas},
     }}
-     className={styles.button} >التالي</Link></a>
+     className={styles.button} >التالي</Link></input>
         </form>
     </div>
 
