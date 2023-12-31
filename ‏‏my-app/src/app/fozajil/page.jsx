@@ -1,6 +1,6 @@
 "use client"
 import { useRef } from 'react'
-import styles from './FormZajil.module.css'
+import styles from './fozajil.module.css'
 import Image from 'next/image'
 import formza from '../../public/formza.png'
 import { useRouter,useSearchParams } from 'next/navigation'
