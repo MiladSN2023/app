@@ -25,7 +25,7 @@ export default function Home() {
   const router = useRouter();
   
   const handlerout = () => {
-    if(tracks == ""){
+    if(tracks.current.value == ""){
         alert("من فضلك قم بملئ الحقول ");
     }else{
         setTrack(tracks.current.value);
