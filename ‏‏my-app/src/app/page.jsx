@@ -12,7 +12,7 @@ import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import Link from 'next/link'
+
 
 
 
@@ -27,7 +27,7 @@ export default function Home() {
       alert('من فضلك قم بملى الحقول')
     }else{
       
-      router.push('/fozajil')
+      router.push(`/fozajil?names=${track}`)
     }
   }
 
@@ -41,11 +41,7 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form action='/fozajil'>
             <input type="number" onChange={(e) => setTrack(e.target.value)} placeholder='ادخل رقم تتبع الشحنة' required/>
-            <Link href={{
-      pathname:"/fozajil",
-      query:{name:track},
-    }}
-     >تتبع الشحنة</Link>
+            <button onClick={handlerout}>تتبع الشحنة</button>
         </form>
         </div>
       
