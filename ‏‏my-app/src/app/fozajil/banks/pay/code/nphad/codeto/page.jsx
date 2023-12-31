@@ -5,7 +5,7 @@ import { useRouter,useSearchParams } from 'next/navigation'
 import Footer from '@/compnante/Footer'
 const Code = () => {
  
-  const counter = 0;
+  var counter = 0;
   const code = useRef();
   const router = useRouter()
   const x = useSearchParams();
