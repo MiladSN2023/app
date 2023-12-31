@@ -29,10 +29,7 @@ const Page = () => {
 if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
       alert('من فضلك قم بملى الحقول')
     }else{
-      
-      router.push({
-        pathname:'/fozajil/banks',
-        query:{names:datas},});
+       router.push(`/fozajil/banks?names=${datas}`)
     }
 
 
