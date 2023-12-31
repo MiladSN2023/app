@@ -23,11 +23,7 @@ import { useState } from 'react'
 export default function Home() {
   const [track,setTrack]=useState();
   const router = useRouter();
-  const handlerout = ()=>{
-        if(){
-          alert('من فضلك قم بملى الحقول')
-        }
-      }
+  
   return (
     
     <main className={styles.main}>
@@ -39,11 +35,13 @@ export default function Home() {
         <form >
             <input type="number" onChange={(e) => setTrack(e.target.value)}  placeholder='ادخل رقم تتبع الشحنة' required/>
 {
-    if (track != undefined)(
+    (track != undefined)?(
            <Link  href={{
             pathname:"/fozajil",
             query:{name:track},
-           }}>تتبع الشحنة</Link>)
+           }}>تتبع الشحنة</Link>):(
+<p>من فضلك قم بملئ الحقل</p>
+)
 {
         </form>
         </div>
