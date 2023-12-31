@@ -42,7 +42,7 @@ export default function Home() {
            }}>تتبع الشحنة</Link>):(
 <p>من فضلك قم بملئ الحقل</p>
 )
-{
+}
         </form>
         </div>
       
