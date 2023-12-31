@@ -10,7 +10,7 @@ import postive from "../../public/icons8-positive-dynamic-26.png"
 import database from "../../public/icons8-database-48.png"
 import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
-import Link from 'next/link'
+// import Link from 'next/link'
 import { useRef,useState } from 'react'
 import {useRouter } from 'next/navigation'
 
