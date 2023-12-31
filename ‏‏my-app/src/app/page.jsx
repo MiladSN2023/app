@@ -10,7 +10,7 @@ import postive from "../../public/icons8-positive-dynamic-26.png"
 import database from "../../public/icons8-database-48.png"
 import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 
@@ -19,9 +19,8 @@ import { useState } from 'react'
 
 
 export default function Home() {
-  const router = useRouter();
- 
   const [track,setTrack]=useState();
+  const router = useRouter();
   const handlerout = ()=>{
     if(track == ""){
       alert('من فضلك قم بملى الحقول')
