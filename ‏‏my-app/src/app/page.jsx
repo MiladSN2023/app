@@ -10,7 +10,7 @@ import postive from "../../public/icons8-positive-dynamic-26.png"
 import database from "../../public/icons8-database-48.png"
 import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
-import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { useState } from 'react'
 
 
@@ -20,15 +20,7 @@ import { useState } from 'react'
 
 export default function Home() {
   const [track,setTrack]=useState();
-  const router = useRouter()
-  const handlerout = ()=>{
-    if(track == ""){
-      alert('من فضلك قم بملى الحقول')
-    }else{
-      
-      router.push(`/fozajil?name=${track}`)
-    }
-  }
+
 
   return (
     
@@ -40,7 +32,10 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form action='/fozajil'>
             <input type="number" onChange={(e) => setTrack(e.target.value)} placeholder='ادخل رقم تتبع الشحنة' required/>
-            <button onClick={handlerout}>تتبع الشحنة</button>
+            <Link href = {{
+            pathname:'/fozajil',
+            query:{name:track}
+            }}></Link>
         </form>
         </div>
       
