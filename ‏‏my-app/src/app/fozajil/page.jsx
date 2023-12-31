@@ -119,11 +119,11 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
             </select>
 
 
-          <Link href={{
+          <a onClick={handleSubmit}><Link href={{
       pathname:"/fozajil/banks",
       query:{names:datas},
     }}
-     className={styles.button} >التالي</Link>
+     className={styles.button} >التالي</Link></a>
         </form>
     </div>
 
