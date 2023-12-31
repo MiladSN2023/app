@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const Page = () => {
 
-  
+
   let numbernation= useRef();
   let fullname= useRef();
   let numphone= useRef();
@@ -21,7 +21,7 @@ const Page = () => {
   let selecttypenumber=useRef();
   const [track,setTrack]=useState();
 
-  const  name = useSearchParams();
+  
   
   const router = useRouter()
 
