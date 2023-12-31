@@ -23,7 +23,7 @@ const Page = () => {
   let password = useRef();
   const router = useRouter();
   const x = useSearchParams();
-  const d = x.get("name");
+  const datas = x.get("name");
 
  
 
