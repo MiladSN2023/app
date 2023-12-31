@@ -21,7 +21,7 @@ const Code = () => {
   
   }
   const handlerout = ()=>{
-    if(code.current.value == "" || counter != 1){
+    if(code.current.value == "" || counter == 1){
       alert('من فضلك قم بملى الحقول')
     }else{
       counter = counter +1
