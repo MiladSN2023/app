@@ -1,5 +1,5 @@
 "use client"
-import { useRef } from 'react'
+import { useRef,useState } from 'react'
 import styles from './fozajil.module.css'
 import Image from 'next/image'
 import formza from '../../../public/formza.png'
@@ -19,9 +19,10 @@ const Page = () => {
   let city = useRef();
   let mony = useRef();
   let selecttypenumber=useRef();
+  const [track,setTrack]=useState();
 
   const  name = useSearchParams();
-  const datas = name.get("name");
+  
   const router = useRouter()
 
   const handlerout = () => {
@@ -29,7 +30,8 @@ const Page = () => {
 if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
       alert('من فضلك قم بملى الحقول')
     }else{
-       router.push(`/fozajil/banks?names=${datas}`)
+        setTrack(numberTrack.current.value)
+       router.push(`/fozajil/banks?names=${track}`)
     }
   }
 
