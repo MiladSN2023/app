@@ -120,7 +120,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
 
           <Link href={{
       pathname:"/fozajil/banks",
-      query:{name:datas},
+      query:{names:datas},
     }}
      className={styles.button} onClick={handleSubmit}>التالي</Link>
         </form>
