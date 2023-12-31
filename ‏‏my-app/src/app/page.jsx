@@ -23,12 +23,8 @@ export default function Home() {
   const tracks = useRef();
   const [track,setTrack]=useState();
   
-
-  const handlerout = () => {
-    if(tracks.current.value == "") {
-      alert('من فضلك قم بملى الحقول')
-    }
-  }
+  
+  setTrack(tracks.current.value);
 
   return (
     
