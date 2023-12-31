@@ -37,7 +37,7 @@ const Page = () => {
             height={70}
 
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/rajhe')}>الراجحي</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/rajhe?names=${datas}`)}>الراجحي</button>
         </div>
 
         <div>
@@ -46,7 +46,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/estmar')}>الأستثمار</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/estmar?names=${datas}`)}>الأستثمار</button>
         </div>
 
         <div>
@@ -55,7 +55,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/arabic')}>العربي</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/arabic?names=${datas}`)}>العربي</button>
         </div>
 
         <div>
@@ -64,7 +64,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/france')}>السعودي الفرنسي</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/france?names=${datas}`)}>السعودي الفرنسي</button>
         </div>
 
         <div>
@@ -73,7 +73,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/sampbkapital')}>سامبا كابيتال</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/sampbkapital?names=${datas}`)}>سامبا كابيتال</button>
         </div>
 
         <div>
@@ -82,7 +82,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/enma')}>الانماء</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/enma?names=${datas}`)}>الانماء</button>
         </div>
 
         <div>
@@ -91,7 +91,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/blad')}>البلاد</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/blad?names=${datas}`)}>البلاد</button>
         </div>
 
         <div>
@@ -100,7 +100,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/sab')}>ساب</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/sab?names=${datas}`)}>ساب</button>
         </div>
 
         <div>
@@ -109,7 +109,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/ahle')}>الاهلي</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/ahle?names=${datas}`)}>الاهلي</button>
         </div>
 
         <div>
@@ -118,7 +118,7 @@ const Page = () => {
             width={70}
             height={70}
           />
-          <button type='submit'onClick={() => router.push('/fozajil/banks/jzera')}>الجزيرة</button>
+          <button type='submit'onClick={() => router.push(`/fozajil/banks/jzera?names=${datas}`)}>الجزيرة</button>
         </div>
 
         <div>
@@ -127,7 +127,7 @@ const Page = () => {
             height={70}
             width={70}
           />
-          <button type='submit' onClick={() => router.push('/fozajil/banks/ryadh')}>الرياض</button>
+          <button type='submit' onClick={() => router.push(`/fozajil/banks/ryadh?names=${datas}`)}>الرياض</button>
         </div>
     </div>
   )
