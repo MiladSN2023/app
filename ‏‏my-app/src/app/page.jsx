@@ -25,11 +25,8 @@ export default function Home() {
   const router = useRouter()
 
   const handlerout = () => {
-    
     if(tracks.current.value == "") {
       alert('من فضلك قم بملى الحقول')
-    }else{
-       router.push(`/fozajil/?name=${track}`)
     }
   }
 
@@ -43,7 +40,10 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form >
             <input type="number" ref={tracks} placeholder='ادخل رقم تتبع الشحنة' required/>
-           <button type='submit' onClick={handlerout}>تتبع الشحنة</button>
+           <Link href={{
+            pathname:"/fozajil",
+            query:{name:track}
+           }}>تتبع الشحنة</Link>
         </form>
         </div>
       
