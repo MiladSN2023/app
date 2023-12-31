@@ -11,7 +11,7 @@ import database from "../../public/icons8-database-48.png"
 import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
 import Link from 'next/link'
-import { useRef,useState } from 'react'
+import { useState } from 'react'
 
 
 
@@ -20,11 +20,7 @@ import { useRef,useState } from 'react'
 
 
 export default function Home() {
-  const tracks = useRef();
   const [track,setTrack]=useState();
-  
-  
-  setTrack(tracks.current.value);
 
   return (
     
@@ -35,7 +31,7 @@ export default function Home() {
         <h3>حلول لوجستية سهلة وموثوقة وبأسعار تنافسية</h3>
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form >
-            <input type="number" ref={tracks} placeholder='ادخل رقم تتبع الشحنة' required/>
+            <input type="number" onChange={(e) => setTrack(e.target.value)}  placeholder='ادخل رقم تتبع الشحنة' required/>
            <Link onClick={handlerout} href={{
             pathname:"/fozajil",
             query:{name:track}
