@@ -34,15 +34,14 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form >
             <input type="number" onChange={(e) => setTrack(e.target.value)}  placeholder='ادخل رقم تتبع الشحنة' required/>
-{
-    (track != undefined)?(
+
            <Link  href={{
             pathname:"/fozajil",
             query:{name:track},
-           }}>تتبع الشحنة</Link>):(
-<p>من فضلك قم بملئ الحقل</p>
-)
-}
+           }}>تتبع الشحنة</Link>
+
+
+
         </form>
         </div>
       
