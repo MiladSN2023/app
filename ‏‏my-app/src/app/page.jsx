@@ -28,7 +28,10 @@ export default function Home() {
           alert('من فضلك قم بملى الحقول')
         }else{
 
-          router.push(`/fozajil?name=${track}`)
+          router.push({
+      pathname: '/fozajil',
+      query: { name: track },
+    });
         }
       }
   return (
