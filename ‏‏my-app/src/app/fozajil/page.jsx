@@ -1,5 +1,5 @@
 "use client"
-import { useRef } from 'react'
+import { useRef ,useState} from 'react'
 import styles from './fozajil.module.css'
 import Image from 'next/image'
 import formza from '../../../public/formza.png'
@@ -26,7 +26,7 @@ const Page = () => {
 
   const x = useSearchParams();
   const datas = x.get("name");
-
+  const [track,setTrack] = useState();
   const router = useRouter()
 
 
@@ -45,6 +45,7 @@ const Page = () => {
 if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
       alert('من فضلك قم بملى الحقول')
     }else{
+      setTrack(numberTrack.current.value)
       router.push('/fozajil/banks')
     }
 
@@ -120,7 +121,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
 
           <Link href={{
       pathname:"/fozajil/banks",
-      query:{names:numberTrack.current.value},
+      query:{names:track},
     }}
      className={styles.button} onClick={handleSubmit}>التالي</Link>
         </form>
