@@ -23,13 +23,14 @@ import { useState } from 'react'
 export default function Home() {
   const [track,setTrack]=useState();
   const router = useRouter();
-  const handleroot = () => {
-     if(track == ""){
-         alert("من فضلك قم بملئ الحقل")
-     }else{
-         router.push(`/fozajil?name=${track}`)
-}
-}
+  const handlerout = ()=>{
+        if(track == ""){
+          alert('من فضلك قم بملى الحقول')
+        }else{
+
+          router.push(`/fozajil?name=${track}`)
+        }
+      }
   return (
     
     <main className={styles.main}>
