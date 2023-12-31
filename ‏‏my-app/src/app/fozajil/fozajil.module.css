@@ -1,0 +1,58 @@
+.contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contain .navbar{
+  width: 100%;
+  height: 50px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-align: center;
+  padding: 0 10px;
+  background-color: aliceblue;
+  box-shadow: 4px -1px 10px #020202;
+}
+
+.contain form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .contain form select,
+  .contain form option{
+    width: 80%;
+    height: 35px;
+  }
+
+
+.contain form  input{
+    width: 80%;
+    height: 35px;
+    margin: 10px;
+
+
+  }
+  .contain form  input[name='numberTrack']{
+    margin-top: 50px;
+  }
+
+  .contain form button{
+    width: 80%;
+    height: 35px;
+    background-color: rgb(255, 195, 30);
+    border: 0px ;
+    border-radius: 5px;
+    margin: 10px;
+    margin-bottom:100px;
+  }
