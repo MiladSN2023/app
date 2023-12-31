@@ -23,13 +23,13 @@ const Page = () => {
   let password = useRef();
   const router = useRouter();
   const x = useSearchParams();
-  const datas = x.get("name");
+  const datas = x.get("names");
 
  
 
   return (
     <div className={styles.continer}>
-          {datas}
+          
         <div>
           <Image
             src={icon1}
