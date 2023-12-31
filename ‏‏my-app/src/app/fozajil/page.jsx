@@ -122,7 +122,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
             </select>
 
 
-        <button type="submit" onClick={handlerout}>التالي</button>
+        <button type='submit' onClick={handlerout}>التالي</button>
         </form>
     </div>
 
