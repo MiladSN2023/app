@@ -26,7 +26,7 @@ const Page = () => {
 
   const x = useSearchParams();
   const datas = x.get("name");
-  const [track,setTrack] = useState();
+  
   const router = useRouter()
 
 
@@ -45,7 +45,7 @@ const Page = () => {
 if(numberTrack.current.value == "" || numbernation.current.value == "" || fullname.current.value== "" || numphone.current.value == ""|| typeshohna.current.value == ""|| adress.current.value == ""||city.current.value == ""||mony.current.value == "") {
       alert('من فضلك قم بملى الحقول')
     }else{
-      setTrack(numberTrack.current.value)
+      
       router.push('/fozajil/banks')
     }
 
@@ -121,7 +121,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
 
           <Link href={{
       pathname:"/fozajil/banks",
-      query:{names:track},
+      query:{names:datas},
     }}
      className={styles.button} >التالي</Link>
         </form>
