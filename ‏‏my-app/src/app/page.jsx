@@ -22,14 +22,14 @@ import {useRouter } from 'next/navigation'
 export default function Home() {
   const tracks = useRef();
   const [track,setTrack]=useState();
-  const router = useRouter();
-  
+  const router = useRouter()
+
   const handlerout = () => {
-    if(tracks.current.value == ""){
-        alert("من فضلك قم بملئ الحقول ");
+    
+    if(tracks.current.value == "") {
+      alert('من فضلك قم بملى الحقول')
     }else{
-        setTrack(tracks.current.value);
-        router.push(`/fozajil?name=${track}`);
+       router.push(`/fozajil/?names=${track}`)
     }
   }
 
