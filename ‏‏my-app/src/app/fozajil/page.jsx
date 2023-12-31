@@ -123,7 +123,7 @@ if(numberTrack.current.value == "" || numbernation.current.value == "" || fullna
       pathname:"/fozajil/banks",
       query:{names:track},
     }}
-     className={styles.button} ><a onClick={handleSubmit}>التالي</a></Link>
+     className={styles.button} >التالي</Link>
         </form>
     </div>
 
