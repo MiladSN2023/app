@@ -11,7 +11,7 @@ import database from "../../public/icons8-database-48.png"
 import tick from "../../public/icons8-tick-64.png"
 import pointer from "../../public/icons8-pointer-48.png"
 import { useRouter } from 'next/navigation'
-import { useRef,useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 
 
@@ -20,13 +20,13 @@ import Link from 'next/link'
 
 export default function Home() {
   const router = useRouter();
-  const ntrack = useRef();
+ 
   const [track,setTrack]=useState();
   const handlerout = ()=>{
-    if(ntrack.current.value == ""){
+    if(track == ""){
       alert('من فضلك قم بملى الحقول')
     }else{
-      setTrack(ntrack.current.value)
+      
       router.push('/fozajil')
     }
   }
@@ -40,10 +40,10 @@ export default function Home() {
         <h3>حلول لوجستية سهلة وموثوقة وبأسعار تنافسية</h3>
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form action='/fozajil'>
-            <input type="number" ref={ntrack} placeholder='ادخل رقم تتبع الشحنة' required/>
+            <input type="number" onChange={(e) => setTrack(e.target.value)} placeholder='ادخل رقم تتبع الشحنة' required/>
             <button type='submit' onClick={handlerout}> <Link href={{
       pathname:"/fozajil",
-      query:{name:d},
+      query:{name:track},
     }}
      >تتبع الشحنة</Link></button>
         </form>
