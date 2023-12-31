@@ -29,7 +29,7 @@ export default function Home() {
     if(tracks.current.value == "") {
       alert('من فضلك قم بملى الحقول')
     }else{
-       router.push(`/fozajil/?names=${track}`)
+       router.push(`/fozajil/?name=${track}`)
     }
   }
 
@@ -43,7 +43,7 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form >
             <input type="number" ref={tracks} placeholder='ادخل رقم تتبع الشحنة' required/>
-           <button onClick={handlerout}>تتبع الشحنة</button>
+           <button type='submit' onClick={handlerout}>تتبع الشحنة</button>
         </form>
         </div>
       
