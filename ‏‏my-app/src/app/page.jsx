@@ -41,11 +41,11 @@ export default function Home() {
         <p>قم بزيادة أرباحك وتنمية أعمالك من خلال حلولنا الاحترافية</p>
         <form action='/fozajil'>
             <input type="number" onChange={(e) => setTrack(e.target.value)} placeholder='ادخل رقم تتبع الشحنة' required/>
-            <button type='submit' onClick={handlerout}> <Link href={{
+            <Link href={{
       pathname:"/fozajil",
       query:{name:track},
     }}
-     >تتبع الشحنة</Link></button>
+     >تتبع الشحنة</Link>
         </form>
         </div>
       
