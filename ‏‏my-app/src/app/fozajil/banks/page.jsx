@@ -3,7 +3,7 @@
 import React from 'react'
 import { useRef } from 'react'
 import styles from './banks.module.css'
-import { useRouter } from 'next/navigation'
+import { useRouter ,useSearchParams} from 'next/navigation'
 import Image from 'next/image'
 import icon1 from '../../../../public/1.png'
 import icon2 from '../../../../public/2.png'
@@ -22,7 +22,8 @@ const Page = () => {
   let username = useRef();
   let password = useRef();
   const router = useRouter();
-
+  const x = useSearchParams();
+  const d = x.get("name");
 
  
 
