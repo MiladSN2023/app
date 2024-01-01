@@ -39,7 +39,7 @@ export default function Home() {
            <Link  href={{
             pathname:"/fozajil",
             query:{name:track},
-           }}>تتبع الشحنة</Link>):(<p>ادخل رقم التتبع فيالحقل</p>)
+           }}>تتبع الشحنة</Link>):(<p>ادخل رقم التتبع في الحقل</p>)
 
           }
 
