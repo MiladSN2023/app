@@ -18,3 +18,5 @@ const Finish = ()=>{
 )
 
 }
+
+export default Finish;
