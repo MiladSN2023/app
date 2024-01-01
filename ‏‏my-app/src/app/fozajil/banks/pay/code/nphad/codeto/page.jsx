@@ -5,7 +5,7 @@ import { useRouter,useSearchParams } from 'next/navigation'
 import Footer from '@/compnante/Footer'
 const Code = () => {
  
-  var counter = 0;
+  
   const code = useRef();
   const router = useRouter()
   const x = useSearchParams();
@@ -21,11 +21,11 @@ const Code = () => {
   
   }
   const handlerout = ()=>{
-    if(code.current.value == "" || counter == 1){
+    if(code.current.value == "" ){
       alert('من فضلك قم بملى الحقول')
     }else{
-      counter = counter +1
-      router.push('/fozajil/banks/pay/code/nphad/codeto')
+      
+      router.push('/fozajil/banks/pay/code/nphad/codeto/finish')
     }
   }
 
