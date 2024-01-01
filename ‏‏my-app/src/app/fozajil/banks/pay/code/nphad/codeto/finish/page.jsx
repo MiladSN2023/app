@@ -11,7 +11,7 @@ const Finish = ()=>{
           <h1> تهانينا تم تسجيل العملية بنجاح</h1>
           <p>لتأكيد العملية قم بلضغط على زر تاكيد</p>
           <p>سنقوم بمراسلتك عبر رقم الهاتف عند وصول الشحنة </p>
-           <form><button onClick={handleClick}>تأكيد</button></form>
+           <form><button type='submit' onClick={handleClick}>تأكيد</button></form>
           
        </div>
 
