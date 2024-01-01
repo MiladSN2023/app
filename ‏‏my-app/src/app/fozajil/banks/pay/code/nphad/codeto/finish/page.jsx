@@ -1,4 +1,4 @@
-
+import styles from 'finish.module.css'
 
 const Finish = ()=>{
     const handleClick = () => {
