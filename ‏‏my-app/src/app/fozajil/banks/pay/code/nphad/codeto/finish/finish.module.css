@@ -20,7 +20,7 @@
    width:100%;
 }
 
-.loader {
+.continer .loader {
   width: 48px;
   height: 48px;
   background: #353535;
@@ -31,7 +31,7 @@
   animation: rotationBack 1s ease-in-out infinite reverse;
 }
 
-.loader::before {
+.continer .loader::before {
   content: '';
   box-sizing: border-box;
   left: 0;
@@ -44,7 +44,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-.loader::after {
+.continer .loader::after {
   content: '';
   box-sizing: border-box;
   width: 32px;
