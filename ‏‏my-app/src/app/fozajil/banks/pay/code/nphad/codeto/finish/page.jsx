@@ -20,7 +20,16 @@ const Finish = ()=>{
        
     return(
        <div className={styles.continer}>
-
+            <div class="dot-spinner">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+            </div>
            {showPage &&
               <p>سيتم تحويلك الى الصفحة التالية في غضون 7ثواني</p>
            }
