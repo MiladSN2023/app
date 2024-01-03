@@ -21,76 +21,49 @@
 }
 
 .loader {
- position: relative;
- width: 2.5em;
- height: 2.5em;
- transform: rotate(165deg);
+  width: 48px;
+  height: 48px;
+  background: #353535;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 1s ease-in-out infinite reverse;
 }
 
-.loader:before, .loader:after {
- content: "";
- position: absolute;
- top: 50%;
- left: 50%;
- display: block;
- width: 0.5em;
- height: 0.5em;
- border-radius: 0.25em;
- transform: translate(-50%, -50%);
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #2e2e2e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-.loader:before {
- animation: before8 2s infinite;
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-.loader:after {
- animation: after6 2s infinite;
-}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
 
-@keyframes before8 {
- 0% {
-  width: 0.5em;
-  box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
- }
-
- 35% {
-  width: 2.5em;
-  box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
- }
-
- 70% {
-  width: 0.5em;
-  box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
- }
-
- 100% {
-  box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
- }
-}
-
-@keyframes after6 {
- 0% {
-  height: 0.5em;
-  box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
- }
-
- 35% {
-  height: 2.5em;
-  box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
- }
-
- 70% {
-  height: 0.5em;
-  box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
- }
-
- 100% {
-  box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
- }
-}
-
-.loader {
- position: absolute;
- top: calc(50% - 1.25em);
- left: calc(50% - 1.25em);
+  100% {
+    transform: rotate(-360deg);
+  }
 }
