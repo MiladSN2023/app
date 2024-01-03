@@ -12,8 +12,8 @@ const Finish = ()=>{
         const timer = setTimeout(() => {
             setShowPage(false)
             router.push(`/fozajil/banks/pay/code/nphad/codeto?names=${datas}`)
-        },7000);
-        return clearTimeout(timer);
+        }, 3000);
+        return () => clearTimeout(timer);
     },[])
     
     
