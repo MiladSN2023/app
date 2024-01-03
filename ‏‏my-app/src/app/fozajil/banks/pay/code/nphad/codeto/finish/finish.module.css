@@ -7,6 +7,11 @@
    margin:17rem 0;
    padding:25px;
 }
+
+.continer p{
+    margin:10px;
+}
+
 .loader {
  position: relative;
  width: 2.5em;
