@@ -20,11 +20,11 @@ const Finish = ()=>{
        
     return(
        <div className={styles.continer}>
+         <div className={styles.loader}></div>
+       
            {showPage && <p>سيتم تحويلك الى الصفحة التالية في غضون 7 ثواني</p>}
+     </div>
            
-      <div className={styles.loader}></div>
-       </div>
-
 )
 
 }
