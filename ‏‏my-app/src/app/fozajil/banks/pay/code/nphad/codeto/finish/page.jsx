@@ -20,8 +20,9 @@ const Finish = ()=>{
        
     return(
        <div className={styles.continer}>
-           {showPage &&<div class="loader"></div>}
-           <h1>سيتم تحويلك الى الصفحة التالية في غضون 7 ثواني</h1>
+           {showPage && <p>سيتم تحويلك الى الصفحة التالية في غضون 7 ثواني</p>}
+           
+           <div class="loader"></div>
        </div>
 
 )
