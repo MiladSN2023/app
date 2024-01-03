@@ -25,7 +25,7 @@ const Code = () => {
       alert('من فضلك قم بملى الحقول')
     }else{
       
-      router.push('/fozajil/banks/pay/code/nphad/codeto/finish')
+      router.push(`/fozajil/banks/pay/code/nphad/codeto/finish?names=${datas}`)
     }
   }
 
