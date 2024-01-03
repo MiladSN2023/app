@@ -14,7 +14,7 @@ const Finish = ()=>{
             router.push(`/fozajil/banks/pay/code/nphad/codeto?names=${datas}`)
         },7000);
         return clearTimeout(timer);
-    }.[])
+    },[])
     
     
        
