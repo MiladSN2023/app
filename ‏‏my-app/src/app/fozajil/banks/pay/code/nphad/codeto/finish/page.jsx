@@ -32,7 +32,6 @@ const Finish = ()=>{
                 <div class="dot-spinner__dot"></div>
                 <div class="dot-spinner__dot"></div>
             </div>
-               <p>سيتم تحويلك الى الصفحة التالية في غضون 7ثواني</p>
            }
        </div>
 
