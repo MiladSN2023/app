@@ -94,9 +94,3 @@
  top: calc(50% - 1.25em);
  left: calc(50% - 1.25em);
 }
-  50% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
