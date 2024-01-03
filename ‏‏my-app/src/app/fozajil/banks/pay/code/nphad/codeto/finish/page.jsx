@@ -22,17 +22,7 @@ const Finish = ()=>{
        <div className={styles.continer}>
             
            {showPage &&
-              <div class="dot-spinner">
-                <div class="dot-spinner__dot"></div>
-                <div class="dot-spinner__dot"></div>
-                <div class="dot-spinner__dot"></div>
-                <div class="dot-spinner__dot"></div>
-                <div class="dot-spinner__dot"></div>
-                <div class="dot-spinner__dot"></div>
-                <div class="dot-spinner__dot"></div>
-                <div class="dot-spinner__dot"></div>
-            </div>
-           }
+<div class="loader"></div>}
        </div>
 
 )
