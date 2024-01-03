@@ -22,7 +22,7 @@ const Finish = ()=>{
        <div className={styles.continer}>
            {showPage && <p>سيتم تحويلك الى الصفحة التالية في غضون 7 ثواني</p>}
            
-           <span class="loader"></span>
+      <div className={styles.loader}></div>
        </div>
 
 )
