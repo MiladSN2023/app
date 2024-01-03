@@ -9,7 +9,7 @@ const Finish = ()=>{
     const datas = x.get("names");
 
     useEffect(() => {
-        const timer = setRimeout(() => {
+        const timer = setTimeout(() => {
             setShowPage(false)
             router.push(`/fozajil/banks/pay/code/nphad/codeto?names=${datas}`)
         },7000);
@@ -22,7 +22,7 @@ const Finish = ()=>{
        <div className={styles.continer}>
 
            {showPage &&
-              <p>لتأكيد العملية قم بلضغط على زر تاكيد</p>
+              <p>سيتم تحويلك الى الصفحة التالية في غضون 7ثواني</p>
            }
        </div>
 
