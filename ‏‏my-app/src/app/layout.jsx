@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
   // const [NTrack,SetNtrack] = useState("milad");
   return (
     <html lang="ar" dir='rtl'>
+     <meta property="og:image" content="https://zajil-express-2030.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage1.c162e9a7.png&w=640&q=75" />
       <body className={tajawal.className}>
       <div className={styles.nav}>
         <Image
