@@ -43,6 +43,7 @@
 .sec1 div form input{
     width: 360px;
     height: 35px;
+    outline:none;
     background-color: #f5f5dc30;
     border: none;
     color: white;
